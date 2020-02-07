@@ -10,6 +10,13 @@ backend:
 
 media_folder: static/img
 public_folder: /img
+publish_mode: editorial_workflow
+
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: duxt6i5yp
+    api_key: 673516864624274
 
 collections:
   - name: "blog"
