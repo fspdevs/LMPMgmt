@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
+
 export const IndexPageTemplate = ({
   image,
   title,
@@ -15,17 +16,22 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => (
+
   <div>
-    <div
+
+    {/* <div
       className="full-width-image margin-top-0"
+      
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: `top left`,
+        backgroundPosition: `top center`,
         backgroundAttachment: `fixed`,
+       
       }}
-    >
+      
+    > */}
       <div
         style={{
           display: 'flex',
@@ -63,7 +69,7 @@ export const IndexPageTemplate = ({
           {subheading}
         </h3>
       </div>
-    </div>
+    {/* </div> */}
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -165,6 +171,7 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+          publicURL
         }
         heading
         subheading
